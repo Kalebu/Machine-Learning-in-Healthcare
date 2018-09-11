@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Liver Diagnosis</title>
+
+<style type="text/css">
+	
+	.header div{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		height: 100px;
+		text-align: center;
+		background: linear-gradient(blue, green);
+		background: -webkit-gradient(blue, green);
+	}
+
+	.main form{
+		margin-top: 120px;
+		background: linear-gradient(blue,black);
+		background: -webkit-gradient-gradient(blue,black);
+		width: 60%;
+		border-radius: 10px;
+		height: 150px;
+	}
+
+</style>
+
+</head>
+<header class="header">
+	<div>
+		<marquee>
+			<h1>
+				Diagnosis Results for Liver Cancer 
+			</h1>
+		</marquee>
+	</div>
+</header>
+
+<div class="main" align="center">
+	<form>
+	{% if prediction == 2 %}
+	<br><br>
+	<h1 style="color: blue">The  patient is free from Liver Cancer  </h1>
+	<br><br>
+	{% elif prediction == 1 %}
+	<br><br>
+	<h1 style="color: red">The  patient is suffering from Liver Cancer  </h1>
+	{% endif %}
+	</form>
+</div>
+
+<footer>
+	<div>
+		
+	</div>
+</footer>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Liver Diagnosis</title>
+
+<style type="text/css">
+	
+	.header div{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		height: 100px;
+		text-align: center;
+		background: linear-gradient(blue, green);
+		background: -webkit-gradient(blue, green);
+	}
+
+	.main form{
+		margin-top: 120px;
+		background: linear-gradient(blue,pink);
+		background: -webkit-gradient-gradient(blue,pink);
+		width: 40%;
+		border-radius: 10px;
+		height: 500px;
+		overflow: scroll;
+	}
+
+</style>
+
+</head>
+<body>
+<header class="header">
+	<div>
+		<marquee>
+			<h1>
+				Digital Liver Cancer Diagnosis  
+			</h1>
+		</marquee>
+	</div>
+</header>
+
+<div class="main" align="center">
+	<form action="{{url_for('diagnosis')}}" method="POST">
+				<label>Fill the The below form</label>
+				<br><br>
+				<label>Enter your age</label>
+				<br><br>
+				<input type="number" name="age" placeholder="19">
+				<br><br>
+				<label>Select your gender </label>
+				<br><br>
+				<input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female
+				<br><br>
+				<label>Enter amount of  tot_bilirubin</label>
+				<br><br>
+				<input type="text" name="tot_bilirubin" placeholder="0.7">
+				<br><br>
+				<label>Enter amount of  direct_bilirubin</label>
+				<br><br>
+				<input type="text" name="direct_bilirubin" placeholder="0.1">
+				<br><br>
+				<label>Enter amount of  tot_proteins</label>
+				<br><br>
+				<input type="text" name="tot_proteins" placeholder="187">
+				<br><br>
+				<label>Enter amount of  albumin</label>
+				<br><br>
+				<input type="text" name="albumin" placeholder="16">
+				<br><br>
+				<label>Enter amount of  ag_ratio</label>
+				<br><br>
+				<input type="text" name="ag_ratio" placeholder="18">
+				<br><br>
+				<label>Enter amount of  sgpt</label>
+				<br><br>
+				<input type="text" name="sgpt" placeholder="6.8">
+				<br><br>
+				<label>Enter amount of  sgot</label>
+				<br><br>
+				<input type="text" name="sgot" placeholder="3.3">
+				<br><br>
+				<label>Enter amount of  alkphos</label>
+				<br><br>
+				<input type="text" name="alkphos" placeholder="0.9">
+				<br><br>
+				<input type="submit" name="submit" value="Check results">
+	</form>
+	
+</div>
+
+<footer>
+	<div>
+		
+	</div>
+</footer>
+
+
+</body>
+</html>
